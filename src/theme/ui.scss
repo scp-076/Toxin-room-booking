@@ -1,0 +1,14 @@
+@import "colors-fonts/colors.scss";
+@import "colors-fonts/fonts.scss";
+
+body {
+  background-color: #E5E5E5;
+}
+
+.colors-fonts {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 145px 150px;
+}

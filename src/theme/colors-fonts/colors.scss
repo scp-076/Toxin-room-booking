@@ -1,0 +1,22 @@
+.color_mixin {
+  display: flex;
+  max-width: 270px;
+  margin-bottom: 20px;
+
+  &__color {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-left: 40px;
+  }
+
+  &__hex {
+    font-weight: normal;
+  }
+}

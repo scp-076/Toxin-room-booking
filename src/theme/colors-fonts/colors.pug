@@ -1,0 +1,6 @@
+mixin color_block(name, hex, rgba)
+    div.color_mixin
+        div.color_mixin__color(style='background-color: rgba' + rgba)
+        div.color_mixin__text-block
+            h2.color_mixin__text=name
+            h2.color_mixin__hex=hex

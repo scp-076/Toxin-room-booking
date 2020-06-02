@@ -1,0 +1,53 @@
+.fonts_mixin {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 403px;
+
+  &__element-h1 {
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  &__element-h2 {
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  &__element-h3 {
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  &__element-span {
+    margin-bottom: 50px;
+    position: relative;
+  }
+}
+
+.fonts_mixin__element-h1:before {
+  content: 'H1';
+  position: absolute;
+  left: -50px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.fonts_mixin__element-h2:before {
+  content: 'H2';
+  position: absolute;
+  left: -50px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.fonts_mixin__element-h3:before {
+  content: 'H3';
+  position: absolute;
+  left: -50px;
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.fonts_mixin__element-span:before {
+  content: 'Body';
+  position: absolute;
+  left: -65px;
+  color: rgba(31, 32, 65, 0.25);
+}
