@@ -71,7 +71,21 @@ module.exports = {
                         },
                     },
                     'css-loader',
-                    'sass-loader'
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            config: {
+                                path: 'postcss.config.js'
+                            }
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             },
             {
@@ -102,11 +116,11 @@ module.exports = {
             filename: filename('css')
         }),
         new CleanWebpackPlugin(),
-        // new CopyWebpackPlugin({
-        //     patterns: [
-        //         {from: path.resolve(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'dist')},
-        //         ]
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: path.resolve(__dirname, 'src/images/v_arrow.svg'), to: path.resolve(__dirname, 'dist')},
+                ]
+        }),
         new HTMLWebpackPlugin({
             template: './src/theme/ui.pug'
         })

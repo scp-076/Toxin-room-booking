@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 @font-face {
   font-family: 'Quicksand';
   src: url("../fonts/Quicksand.ttf") format('ttf');
@@ -40,7 +42,7 @@ dd {
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: rgba(31, 32, 65, 0.75);
+  color: $body-color;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -86,7 +88,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: bold;
-  color: #1F2041;
+  color: $h-color;
   line-height: 30px;
   word-spacing: 3px;
 }
@@ -95,7 +97,7 @@ h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 19px;
   font-weight: bold;
-  color: #1F2041;
+  color: $h-color;
   line-height: 24px;
   word-spacing: 0.5px;
 }
@@ -104,5 +106,5 @@ h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 12px;
   font-weight: bold;
-  color: #1F2041;
+  color: $h-color;
 }

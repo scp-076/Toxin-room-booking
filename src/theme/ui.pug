@@ -1,6 +1,8 @@
 extends ../pages/base.pug
 include colors-fonts/colors.pug
 include colors-fonts/fonts.pug
+include form-elements/text-field/text-field.pug
+include form-elements/dropdown_guests/dropdown_guests
 
 block main
     div.colors-fonts
@@ -14,3 +16,13 @@ block main
             +color_block('Green', '#6FCF97', '(111,207,151, 1)')
         div.fonts
             +fonts_block
+
+    div.form-elements
+        div.inputs
+            +text-input(text, 'Email', 'text field')
+            +dropdown-guests-input
+
+
+
+
+

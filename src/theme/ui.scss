@@ -1,5 +1,7 @@
 @import "colors-fonts/colors.scss";
 @import "colors-fonts/fonts.scss";
+@import "form-elements/text-field/text-field.scss";
+@import "form-elements/dropdown_guests/dropdown_guests";
 
 body {
   background-color: #E5E5E5;
@@ -11,4 +13,16 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   padding: 145px 150px;
+  margin-bottom: 100px;
+}
+
+.form-elements {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 145px 150px;
+  margin-bottom: 100px;
+
+  &.inputs {
+    flex-flow: column nowrap;
+  }
 }
