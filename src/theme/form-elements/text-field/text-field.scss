@@ -1,8 +1,8 @@
 .text-input-block {
+  margin-bottom: 20px;
 
   &__title {
     text-transform: uppercase;
-    margin-bottom: 5px;
   }
 
   &__input {
@@ -10,7 +10,6 @@
     height: 44px;
     border-radius: 4px;
     padding-left: 13px;
-    margin-bottom: 20px;
     border: none;
     outline: none;
 

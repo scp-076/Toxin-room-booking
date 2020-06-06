@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+$rooms-options-bedrooms: "dropdown_rooms__options-bedrooms";
+$rooms-options-beds: "dropdown_rooms__options-beds";
+$rooms-options-bathrooms: "dropdown_rooms__options-bathrooms";
+$rooms-count-bedrooms: "dropdown_rooms__options__count-bedrooms";
+$rooms-count-beds: "dropdown_rooms__options__count-beds";
+$rooms-count-bathrooms: "dropdown_rooms__options__count-bathrooms";
+$btn-minus: "btn-minus";
+$btn-plus: "btn-plus";
+
+.dropdown_rooms {
+  @include dropdown_options(266px, 118px, $rooms-options-bedrooms, $rooms-options-beds, $rooms-options-bathrooms, $rooms-count-bedrooms, $rooms-count-beds, $rooms-count-bathrooms, $btn-minus, $btn-plus);
+}

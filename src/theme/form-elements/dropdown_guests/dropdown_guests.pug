@@ -1,26 +1,30 @@
-mixin dropdown-guests-input
+mixin dropdown-guests-input(title)
     .dropdown_guests
+        h3.text-input-block__title #{title}
         label
-            input.dropdown_guests__input-total(type='text', readonly='', placeholder='Сколько спален, кроватей...')
+            input.dropdown_guests__input-total(type='text', readonly='', placeholder='Сколько гостей')
         .dropdown_guests__options
-            .dropdown_guests__options-bedrooms
-                span.dropdown_guests__options-description спальни
+            .dropdown_guests__options-adults
+                span.dropdown_guests__options-description взрослые
                 .dropdown_guests__options-counter
-                    button.btn-minus.btn-minus-rooms -
+                    button.btn-minus.btn-minus-adults -
                     label.dropdown_guests__options__number-label
-                        input.dropdown_guests__options__count-bedrooms(type='number', readonly='', value='0', min='0', max='999')
-                    button.btn-plus.btn-plus-rooms +
-            .dropdown_guests__options-beds
-                span.dropdown_guests__options-description кровати
+                        input.dropdown_guests__options__count-adults(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-adults +
+            .dropdown_guests__options-kids
+                span.dropdown_guests__options-description дети
                 .dropdown_guests__options-counter
-                    button.btn-minus.btn-minus-beds -
+                    button.btn-minus.btn-minus-kids -
                     label.dropdown_guests__options__number-label
-                        input.dropdown_guests__options__count-beds(type='number', readonly='', value='0', min='0', max='999')
-                    button.btn-plus.btn-plus-beds +
-            .dropdown_guests__options-bathrooms
-                span.dropdown_guests__options-description ванные комнаты
+                        input.dropdown_guests__options__count-kids(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-kids +
+            .dropdown_guests__options-infants
+                span.dropdown_guests__options-description младенцы
                 .dropdown_guests__options-counter
-                    button.btn-minus.btn-minus-bathrooms -
+                    button.btn-minus.btn-minus-infants -
                     label.dropdown_guests__options__number-label
-                        input.dropdown_guests__options__count-bathrooms(type='number', readonly='', value='0', min='0', max='999')
-                    button.btn-plus.btn-plus-bathrooms +
+                        input.dropdown_guests__options__count-infants(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-infants +
+            .dropdown_guests_clear-submit-btns
+                button.dropdown_guests_clear-submit-btns__clear очистить
+                button.dropdown_guests_clear-submit-btns__submit применить

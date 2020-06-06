@@ -1,0 +1,27 @@
+mixin dropdown-rooms-input(title)
+    .dropdown_rooms
+        h3.text-input-block__title #{title}
+        label
+            input.dropdown_rooms__input-total(type='text', readonly='', placeholder='Сколько спален, кроватей...')
+        .dropdown_rooms__options
+            .dropdown_rooms__options-bedrooms
+                span.dropdown_rooms__options-description спальни
+                .dropdown_rooms__options-counter
+                    button.btn-minus.btn-minus-rooms -
+                    label.dropdown_rooms__options__number-label
+                        input.dropdown_rooms__options__count-bedrooms(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-rooms +
+            .dropdown_rooms__options-beds
+                span.dropdown_rooms__options-description кровати
+                .dropdown_rooms__options-counter
+                    button.btn-minus.btn-minus-beds -
+                    label.dropdown_rooms__options__number-label
+                        input.dropdown_rooms__options__count-beds(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-beds +
+            .dropdown_rooms__options-bathrooms
+                span.dropdown_rooms__options-description ванные комнаты
+                .dropdown_rooms__options-counter
+                    button.btn-minus.btn-minus-bathrooms -
+                    label.dropdown_rooms__options__number-label
+                        input.dropdown_rooms__options__count-bathrooms(type='number', readonly='', value='0', min='0', max='999')
+                    button.btn-plus.btn-plus-bathrooms +
