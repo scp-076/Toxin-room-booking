@@ -1,9 +1,10 @@
 extends ../pages/base.pug
 include colors-fonts/colors.pug
 include colors-fonts/fonts.pug
-include form-elements/text-field/text-field.pug
+include form-elements/text_field/text-field.pug
 include form-elements/dropdown_rooms/dropdown_rooms
 include form-elements/dropdown_guests/dropdown_guests
+include form-elements/masked_date_input/masked_date_input
 
 block main
     div.colors-fonts
@@ -23,6 +24,7 @@ block main
             +text-input(text, 'Email', 'text field')
             +dropdown-guests-input('dropdown')
             +dropdown-rooms-input('dropdown')
+            +masked_date_input('masked text field')
 
 
 
