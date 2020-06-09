@@ -1,27 +1,28 @@
+@import "../../variables.scss";
+
 .masked_date_input_block {
   margin-bottom: 20px;
 
-  &__title {
-    text-transform: uppercase;
-  }
 
   &__input {
     width: 320px;
     height: 44px;
+    color: $dark-shade75;
+    border: 1px solid $dark-shade25;
     border-radius: 4px;
     padding-left: 13px;
-    border: none;
     outline: none;
 
     &::placeholder {
-      color: rgba(31, 32, 65, 0.25);
+      color: $dark-shade25;
     }
 
     &:hover {
-      box-shadow: 0 0 2px rgb(31, 32, 65);
+      box-shadow: 0 0 2px $dark-shade75;
     }
+
     &:focus {
-      box-shadow: 0 0 2px rgb(31, 32, 65);
+      box-shadow: 0 0 2px $dark-shade75;
     }
   }
 }

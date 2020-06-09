@@ -49,10 +49,6 @@
     background-color: #fff;
     z-index: 42;
 
-    &-description {
-      text-transform: uppercase;
-      font-weight: bold;
-    }
 
     &-counter {
       display: flex;
@@ -78,6 +74,8 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .#{$option3} {

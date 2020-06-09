@@ -1,4 +1,5 @@
 mixin text-input(type, placeholder, title)
     div.text_input_block
-        h3.text_input_block__title #{title}
-        input.text_input_block__input(type=type, placeholder=placeholder)
+        h3 #{title}
+        label
+            input.text_input_block__input(type=type, placeholder=placeholder)

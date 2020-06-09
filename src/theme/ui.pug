@@ -4,7 +4,9 @@ include colors-fonts/fonts.pug
 include form-elements/text_field/text-field.pug
 include form-elements/dropdown_rooms/dropdown_rooms
 include form-elements/dropdown_guests/dropdown_guests
+include form-elements/dropdown_date/dropdown_date
 include form-elements/masked_date_input/masked_date_input
+
 
 block main
     div.colors-fonts
@@ -25,6 +27,9 @@ block main
             +dropdown-guests-input('dropdown')
             +dropdown-rooms-input('dropdown')
             +masked_date_input('masked text field')
+            +dropdown_date('date dropdown')
+
+
 
 
 

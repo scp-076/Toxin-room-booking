@@ -1,3 +1,4 @@
+// string declension
 function num2str(n, text_forms) {
     n = Math.abs(n) % 100;
     let n1 = n % 10;
@@ -7,6 +8,7 @@ function num2str(n, text_forms) {
     return text_forms[2];
 }
 
+// dropdown item quantity
 export function dropDownSet(dropDownName, cls) {
     let wrap = document.querySelector(cls[0]);
     let input = wrap.querySelector(cls[1]);
@@ -122,3 +124,5 @@ export function dropDownSet(dropDownName, cls) {
         })
     }
 }
+
+
