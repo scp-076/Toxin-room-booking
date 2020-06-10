@@ -110,4 +110,43 @@
   }
 }
 
+@mixin dropdown_date($width){
+  margin-bottom: 20px;
+  width: $width;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-image: url("../images/v_arrow.svg");
+    width: 13px;
+    height: 8px;
+    position: absolute;
+    right: 16px;
+    top: 44px;
+    color: $dark-shade5;
+    pointer-events: none;
+  }
+
+  &__input {
+    width: 100%;
+    height: 44px;
+    padding-left: 13px;
+    outline: none;
+    color: $dark-shade75;
+    border: 1px solid $dark-shade25;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $dark-shade25;
+    }
+
+    &:hover {
+      box-shadow: 0 0 2px $dark-shade75;
+    }
+    &:focus {
+      box-shadow: 0 0 2px $dark-shade75;
+    }
+  }
+}
 

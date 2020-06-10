@@ -1,0 +1,10 @@
+@import "../../variables.scss";
+@import "../../global.scss";
+@import "../../mixins.scss";
+
+.dropdown_date_filtered {
+  @include dropdown_date(266px)
+
+}
+
+//linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);

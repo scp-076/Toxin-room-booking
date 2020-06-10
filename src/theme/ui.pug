@@ -5,6 +5,7 @@ include form-elements/text_field/text-field.pug
 include form-elements/dropdown_rooms/dropdown_rooms
 include form-elements/dropdown_guests/dropdown_guests
 include form-elements/dropdown_date/dropdown_date
+include form-elements/dropdown_date_filtered/dropdown_date_filtered
 include form-elements/masked_date_input/masked_date_input
 
 
@@ -28,6 +29,7 @@ block main
             +dropdown-rooms-input('dropdown')
             +masked_date_input('masked text field')
             +dropdown_date('date dropdown')
+            +dropdown_date_filtered('filtered date dropdown')
 
 
 
