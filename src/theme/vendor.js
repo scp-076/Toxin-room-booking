@@ -82,6 +82,9 @@ export function dropDownSet(dropDownName, cls) {
     input.addEventListener('click', () => {
         dropdownMenu.classList.toggle('options-shown');
     });
+    input.addEventListener('blur', () => {
+        dropdownMenu.classList.remove('options-shown');
+    });
 
     btn_option1_minus.addEventListener('click', () => {
         countMinus(count_option1, btn_option1_minus);
@@ -175,6 +178,7 @@ export function dropDownSet(dropDownName, cls) {
 
                 todayButton: false,
                 clearButton: false,
+                submitButton: false,
 
                 showEvent: 'focus',
                 autoClose: false,
@@ -731,6 +735,10 @@ export function dropDownSet(dropDownName, cls) {
                 if (this.opts.onSelect) {
                     this._triggerOnChange()
                 }
+            },
+
+            submit: function() {
+                this.hide();
             },
 
             /**
@@ -1616,6 +1624,7 @@ export function dropDownSet(dropDownName, cls) {
                 monthsShort: ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'],
                 today: 'Сегодня',
                 clear: 'Очистить',
+                submit: 'Применить',
                 dateFormat: 'dd.mm.yyyy',
                 timeFormat: 'hh:ii',
                 firstDay: 1
@@ -1676,9 +1685,9 @@ export function dropDownSet(dropDownName, cls) {
             },
 
             _getDayNamesHtml: function (firstDay, curDay, html, i) {
-                curDay = curDay != undefined ? curDay : firstDay;
+                curDay = curDay !== undefined ? curDay : firstDay;
                 html = html ? html : '';
-                i = i != undefined ? i : 0;
+                i = i !== undefined ? i : 0;
 
                 if (i > 7) return html;
                 if (curDay === 7) return this._getDayNamesHtml(firstDay, 0, html, ++i);
@@ -1983,6 +1992,9 @@ export function dropDownSet(dropDownName, cls) {
                 }
                 if (this.opts.clearButton) {
                     this._addButton('clear')
+                }
+                if (this.opts.submitButton) {
+                    this._addButton('submit')
                 }
             },
 
