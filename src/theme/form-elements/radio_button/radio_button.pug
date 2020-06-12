@@ -1,0 +1,6 @@
+mixin radio_button(text, name)
+    .radio-button
+        label
+            input.radio-button__input(type='radio', name=name)
+            | #{text}
+            span.radio-button__mark

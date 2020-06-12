@@ -82,9 +82,6 @@ export function dropDownSet(dropDownName, cls) {
     input.addEventListener('click', () => {
         dropdownMenu.classList.toggle('options-shown');
     });
-    input.addEventListener('blur', () => {
-        dropdownMenu.classList.remove('options-shown');
-    });
 
     btn_option1_minus.addEventListener('click', () => {
         countMinus(count_option1, btn_option1_minus);

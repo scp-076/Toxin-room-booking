@@ -1,0 +1,6 @@
+mixin checkbox(text, name)
+    .checkbox
+        label
+          input.checkbox__input(type='checkbox', name=name)
+          | #{text}
+          span.checkbox__mark

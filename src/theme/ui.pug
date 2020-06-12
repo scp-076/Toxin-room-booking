@@ -7,6 +7,8 @@ include form-elements/dropdown_guests/dropdown_guests
 include form-elements/dropdown_date/dropdown_date
 include form-elements/dropdown_date_filtered/dropdown_date_filtered
 include form-elements/masked_date_input/masked_date_input
+include form-elements/checkbox/checkbox
+include form-elements/radio_button/radio_button
 
 
 block main
@@ -30,8 +32,17 @@ block main
             +masked_date_input('masked text field')
             +dropdown_date('date dropdown')
             +dropdown_date_filtered('filtered date dropdown')
-
-
+        div.form-elements__toggle-buttons
+            div.checkbox-buttons
+                h3 checkbox buttons
+                +checkbox('Можно курить', 'smokingAllowed')
+                +checkbox('Можно с питомцами', 'petsAllowed')
+                +checkbox('Можно пригласить гостей (до 10 человек)', 'guestsAllowed')
+            div.radio-buttons
+                h3 radio buttons
+                .radio-buttons__wrapper
+                    +radio_button('Мужчина', 'gender')
+                    +radio_button('Женщина', 'gender')
 
 
 

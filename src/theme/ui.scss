@@ -6,6 +6,8 @@
 @import "form-elements/masked_date_input/masked_date_input.scss";
 @import "form-elements/dropdown_date/dropdown_date.scss";
 @import "form-elements/dropdown_date_filtered/dropdown_date_filtered.scss";
+@import "form-elements/checkbox/checkbox.scss";
+@import "form-elements/radio_button/radio_button.scss";
 
 body {
   background-color: #E5E5E5;
@@ -31,5 +33,30 @@ body {
     display: flex;
     width: 100%;
     flex-flow: column nowrap;
+  }
+
+  &__toggle-buttons {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+  }
+
+  & .checkbox-buttons {
+
+    & h3 {
+      margin-bottom: 5px;
+    }
+  }
+
+  & .radio-buttons {
+
+    &__wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    & h3 {
+      margin-bottom: 5px;
+    }
   }
 }
