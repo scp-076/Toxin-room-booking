@@ -1,0 +1,49 @@
+@import "../variables.scss";
+
+.like_button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 38px;
+  height: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+
+  &__wrap {
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: $dark-shade25;
+    position: relative;
+  }
+
+  &__heart {
+    background-image: url("../images/heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    margin-top: .5px;
+  }
+
+  &__counter {
+    color: $dark-shade25;
+    margin-right: 10px;
+    font-size: 12px;
+    user-select: none;
+  }
+}
+
+.heart_purple {
+  background-image: url("../images/heart_purple.svg");
+}
+
+.border-purple {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}

@@ -9,6 +9,8 @@ include form-elements/dropdown_date_filtered/dropdown_date_filtered
 include form-elements/masked_date_input/masked_date_input
 include form-elements/checkbox/checkbox
 include form-elements/radio_button/radio_button
+include form-elements/checkbox_slider/checkbox_slider
+include like_button/like_button
 
 
 block main
@@ -43,8 +45,11 @@ block main
                 .radio-buttons__wrapper
                     +radio_button('Мужчина', 'gender')
                     +radio_button('Женщина', 'gender')
-
-
+                h3 toggle
+                +checkbox_slider('Получать спецпредложения')
+            div.like-buttons
+                h3 like button
+                +like_button(2)
 
 
 
