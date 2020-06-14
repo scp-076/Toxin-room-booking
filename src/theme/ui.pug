@@ -11,6 +11,7 @@ include form-elements/checkbox/checkbox
 include form-elements/radio_button/radio_button
 include form-elements/checkbox_slider/checkbox_slider
 include like_button/like_button
+include rate_button/rate_button
 
 
 block main
@@ -50,7 +51,9 @@ block main
             div.like-buttons
                 h3 like button
                 +like_button(2)
-
+            div.rate-button
+                h3 rate button
+                +rate_button
 
 
 

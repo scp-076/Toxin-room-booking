@@ -10,6 +10,7 @@
 @import "form-elements/radio_button/radio_button.scss";
 @import "form-elements/checkbox_slider/checkbox_slider.scss";
 @import "like_button/like_button.scss";
+@import "rate_button/rate_button.scss";
 
 body {
   background-color: #E5E5E5;
@@ -51,6 +52,7 @@ body {
   }
 
   & .radio-buttons {
+    margin-bottom: 10px;
 
     &__wrapper {
       display: flex;
@@ -60,5 +62,9 @@ body {
     & h3 {
       margin-bottom: 5px;
     }
+  }
+
+  & .like-buttons {
+    margin-bottom: 10px;
   }
 }

@@ -7,3 +7,4 @@ import './theme/form-elements/dropdown_date/dropdown_date.js';
 import './theme/form-elements/dropdown_date_filtered/dropdown_date_filtered.js';
 import './theme/form-elements/masked_date_input/masked_date_input.js';
 import './theme/like_button/like_button.js';
+import './theme/rate_button/rate_button.js';
