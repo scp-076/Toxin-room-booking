@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "inputmask": "^5.0.4-beta.33",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "nouislider": "^14.5.0"
   }
 }

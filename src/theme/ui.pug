@@ -12,6 +12,7 @@ include form-elements/radio_button/radio_button
 include form-elements/checkbox_slider/checkbox_slider
 include like_button/like_button
 include rate_button/rate_button
+include range_slider/range_slider
 
 
 block main
@@ -54,6 +55,12 @@ block main
             div.rate-button
                 h3 rate button
                 +rate_button
+        div.form-elements__buttons
+            div.range-slider
+                div.range-slider__text
+                    h3 range slider
+                    span 5000&#8381; - 10000&#8381;
+                +range_slider
 
 
 

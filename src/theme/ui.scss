@@ -11,6 +11,8 @@
 @import "form-elements/checkbox_slider/checkbox_slider.scss";
 @import "like_button/like_button.scss";
 @import "rate_button/rate_button.scss";
+@import '../../node_modules/nouislider/distribute/nouislider.css';
+@import "range_slider/range_slider.scss";
 
 body {
   background-color: #E5E5E5;
@@ -66,5 +68,27 @@ body {
 
   & .like-buttons {
     margin-bottom: 10px;
+  }
+
+  &__buttons {
+
+    & .range-slider {
+      margin-bottom: 40px;
+
+      &__text {
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        & span {
+          font-size: 12px;
+          color: $dark-shade50;
+        }
+      }
+
+    }
+
+
   }
 }
