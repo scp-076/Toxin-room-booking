@@ -10,13 +10,17 @@ include form-elements/masked_date_input/masked_date_input
 include form-elements/checkbox/checkbox
 include form-elements/radio_button/radio_button
 include form-elements/checkbox_slider/checkbox_slider
-include like_button/like_button
-include rate_button/rate_button
-include range_slider/range_slider
+include form-elements/like_button/like_button
+include form-elements/rate_button/rate_button
+include form-elements/range_slider/range_slider
+include form-elements/buttons/button_filled/button_filled
+include form-elements/buttons/button_border/button_border
+include form-elements/buttons/button_plain_text/button_plain_text
+include form-elements/buttons/button_wide/button_wide
 
 
 block main
-    div.colors-fonts
+    section.colors-fonts
         div.colors
             +color_block('Dark Shade 100%', '#1F2041', '(31, 32, 65, 1)')
             +color_block('Dark Shade 75%', '#1F2041', '(31, 32, 65, .75)')
@@ -28,7 +32,7 @@ block main
         div.fonts
             +fonts_block
 
-    div.form-elements
+    section.form-elements
         div.form-elements__inputs
             +text-input(text, 'Email', 'text field')
             +dropdown-guests-input('dropdown')
@@ -61,6 +65,16 @@ block main
                     h3 range slider
                     span 5000&#8381; - 10000&#8381;
                 +range_slider
-
-
-
+            div.buttons-simple
+                h3 buttons
+                div.buttons
+                    +button_filled('click me', false)
+                    +button_filled('click me', true)
+                div.buttons
+                    +button_border('click me', false)
+                    +button_border('click me', true)
+                div.buttons
+                    +button_plain_text('click me', false)
+                    +button_plain_text('click me', true)
+                div.button-wide
+                    +button_wide('перейти к оплате', false)

@@ -1,5 +1,5 @@
-import img1 from '../../../src/images/star.png';
-import img2 from '../../../src/images/star_filled.png';
+import img1 from '../../../images/star.png';
+import img2 from '../../../images/star_filled.png';
 
 let stars = document.querySelectorAll('.rate_button__img');
 

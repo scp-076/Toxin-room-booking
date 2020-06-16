@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+
+.button_plain_text {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  color: $purple;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+
+  &:active {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    color: $dark-shade50;
+
+    &:hover {
+      cursor: auto;
+    }
+  }
+}

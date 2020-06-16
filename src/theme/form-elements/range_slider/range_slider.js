@@ -3,7 +3,7 @@ import noUiSlider from 'nouislider';
 const slider = document.querySelector('.slider');
 
 noUiSlider.create(slider, {
-    start: [20, 80],
+    start: [6000, 8000],
     connect: true,
     range: {
         'min': 5000,

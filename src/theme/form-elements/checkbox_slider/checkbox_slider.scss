@@ -26,7 +26,7 @@
 
     &:checked + .checkbox_slider__slider:before {
       transform: translateX(19px);
-      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      background: $purple-gradient;
     }
   }
 
