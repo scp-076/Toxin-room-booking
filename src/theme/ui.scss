@@ -17,6 +17,7 @@
 @import "form-elements/buttons/button_border/button_border";
 @import "form-elements/buttons/button_plain_text/button_plain_text.scss";
 @import "form-elements/buttons/button_wide/button_wide.scss";
+@import "form-elements/pagination/pagination.scss";
 
 body {
   background-color: #E5E5E5;
@@ -112,5 +113,9 @@ body {
       width: 320px;
       margin-bottom: 30px;
     }
+  }
+
+  & .pagination-bar {
+    width: 281px;
   }
 }

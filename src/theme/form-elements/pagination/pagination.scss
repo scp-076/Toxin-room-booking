@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+
+.pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &__next, &__prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__next:after {
+    content: "";
+    background: url("../images/arrow_forward_white.svg") no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 11px;
+    left: 12px;
+  }
+
+  &__prev:after {
+    content: "";
+    background: url("../images/arrow_forward_white.svg") no-repeat;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transform: rotate(180deg);
+  }
+
+  &__list {
+    display: flex;
+    width: calc(100% - 80px);
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+  &__page {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: $dark-shade50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  & .current {
+    background: $purple-gradient;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

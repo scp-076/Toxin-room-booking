@@ -17,6 +17,7 @@ include form-elements/buttons/button_filled/button_filled
 include form-elements/buttons/button_border/button_border
 include form-elements/buttons/button_plain_text/button_plain_text
 include form-elements/buttons/button_wide/button_wide
+include form-elements/pagination/pagination
 
 
 block main
@@ -78,3 +79,6 @@ block main
                     +button_plain_text('click me', true)
                 div.button-wide
                     +button_wide('перейти к оплате', false)
+            div.pagination-bar
+                    h3 pagination
+                    +pagination
