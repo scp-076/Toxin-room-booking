@@ -11,3 +11,4 @@ import './theme/form-elements/rate_button/rate_button.js';
 import './theme/form-elements/range_slider/range_slider.js';
 import './theme/form-elements/buttons/button_border/button_border.js';
 import './theme/form-elements/pagination/pagination.js';
+import './theme/form-elements/checkbox-expandable/checkbox-expandable.js';

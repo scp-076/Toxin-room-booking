@@ -1,0 +1,14 @@
+include ../../form-elements/checkbox/checkbox
+
+mixin checkbox-expandable
+    div.checkbox-expandable
+        span.checkbox-expandable__arrow
+        div.checkbox-expandable__header
+            h3 expandable checkbox list
+        div.checkbox-expandable__checkboxes
+            +checkbox('Завтрак', 'breakfast')
+            +checkbox('Письменный стол', 'breakfast')
+            +checkbox('Стул для кормления', 'desk')
+            +checkbox('Кроватка', 'crib')
+            +checkbox('Телевизор', 'tv')
+            +checkbox('Шампунь', 'shampoo')

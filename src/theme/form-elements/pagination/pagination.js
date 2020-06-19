@@ -1,4 +1,4 @@
-var Pagination = {
+const Pagination = {
 
     code: '',
 
@@ -102,6 +102,7 @@ var Pagination = {
             Pagination.Last();
         }
         Pagination.Finish();
+        Pagination.checkButtons();
     },
 
 
@@ -112,23 +113,33 @@ var Pagination = {
 
     // binding buttons
     Buttons: function(e) {
-        let nav = e.getElementsByTagName('a');
-        nav[0].addEventListener('click', Pagination.Prev, false);
-        nav[1].addEventListener('click', Pagination.Next, false);
+        let prev = e.querySelector('.pagination__prev');
+        let next = e.querySelector('.pagination__next');
+        prev.addEventListener('click', Pagination.Prev, false);
+        next.addEventListener('click', Pagination.Next, false);
     },
 
     // create skeleton
     Create: function(e) {
 
         let html = [
-            '<a class="pagination__prev"></a>', // previous button
+            '<button class="pagination__prev"></button>', // previous button
             '<span class="pagination__list"></span>',  // pagination container
-            '<a class="pagination__next"></a>'  // next button
+            '<button class="pagination__next"></button>'  // next button
         ];
 
         e.innerHTML = html.join('');
-        Pagination.e = e.getElementsByTagName('span')[0];
+        Pagination.e = e.querySelector('.pagination__list');
         Pagination.Buttons(e);
+    },
+
+    checkButtons: function() {
+        let prev = document.querySelector('.pagination__prev');
+        let next = document.querySelector('.pagination__next');
+        let current =  document.querySelector('.current');
+        let size = String(Pagination.size);
+        prev.disabled = current.innerHTML === "1";
+        next.disabled = current.innerHTML === size;
     },
 
     // init

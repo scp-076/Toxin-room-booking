@@ -1,0 +1,39 @@
+.checkbox-expandable {
+  width: 266px;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  background: #fff;
+
+  &__arrow {
+    position: absolute;
+    background: url("../images/v_arrow.svg") transparent;
+    top: 7px;
+    right: 0;
+    width: 13px;
+    height: 8px;
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &__checkboxes {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    top: 24px;
+    width: 100%;
+    padding: 17px 0 0 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+
+    &-active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
