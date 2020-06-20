@@ -1,0 +1,7 @@
+mixin rich_checkbox(text, textAdd, name)
+    .rich-checkbox
+        label
+            input.rich-checkbox__input(type='checkbox', name=name)
+            | #{text}
+            span.rich-checkbox__mark
+        span.rich-checkbox__textAdd #{textAdd}

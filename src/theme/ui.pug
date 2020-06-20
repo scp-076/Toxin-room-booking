@@ -19,6 +19,8 @@ include form-elements/buttons/button_plain_text/button_plain_text
 include form-elements/buttons/button_wide/button_wide
 include form-elements/pagination/pagination
 include form-elements/checkbox-expandable/checkbox-expandable
+include form-elements/rich-checkbox/rich_checkbox
+include form-elements/bullet-list/bullet-list
 
 
 block main
@@ -86,3 +88,10 @@ block main
     section.form-elements
         div.expandable-checkbox
             +checkbox-expandable
+        div.rich-checkbox-buttons
+            h3 rich checkbox buttons
+            +rich_checkbox('Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'corridor')
+            +rich_checkbox('Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.', 'helper')
+        div.bullet-list
+            h3 bullet list
+            +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия - после 13:00, а выезд до 12:00'])

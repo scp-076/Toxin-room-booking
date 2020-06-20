@@ -19,6 +19,8 @@
 @import "form-elements/buttons/button_wide/button_wide.scss";
 @import "form-elements/pagination/pagination.scss";
 @import "form-elements/checkbox-expandable/checkbox-expandable.scss";
+@import "form-elements/rich-checkbox/rich_checkbox.scss";
+@import "form-elements/bullet-list/bullet-list.scss";
 
 .colors-fonts {
   display: flex;
@@ -35,6 +37,10 @@
   flex-flow: row nowrap;
   padding: 20px 150px;
 
+  & h3 {
+    margin-bottom: 16px;
+  }
+
   &__inputs {
     display: flex;
     width: 100%;
@@ -46,24 +52,12 @@
     width: 100%;
     flex-flow: column nowrap;
   }
-
-  & .checkbox-buttons {
-
-    & h3 {
-      margin-bottom: 5px;
-    }
-  }
-
   & .radio-buttons {
     margin-bottom: 10px;
 
     &__wrapper {
       display: flex;
       flex-flow: row nowrap;
-    }
-
-    & h3 {
-      margin-bottom: 5px;
     }
   }
 
@@ -72,6 +66,7 @@
   }
 
   &__buttons {
+    width: 100%;
 
     & .range-slider {
       margin-bottom: 40px;
@@ -80,6 +75,7 @@
         margin-bottom: 20px;
         display: flex;
         flex-flow: row nowrap;
+        width: 266px;
         justify-content: space-between;
 
         & span {
@@ -93,10 +89,6 @@
 
   & .buttons-simple {
     width: 218px;
-
-    & h3 {
-      margin-bottom: 5px;
-    }
 
     & .buttons {
       width: 100%;
@@ -113,5 +105,17 @@
 
   & .pagination-bar {
     width: 281px;
+  }
+
+  & .expandable-checkbox {
+    width: 100%;
+  }
+
+  & .rich-checkbox-buttons {
+    width: 100%;
+  }
+
+  & .bullet-list {
+    width: 100%;
   }
 }

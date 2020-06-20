@@ -1,0 +1,22 @@
+@import "../../variables.scss";
+
+.bullet_list {
+
+  &__li {
+    max-width: 234px;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    position: relative;
+  }
+
+  &__list-style {
+    width: 10px;
+    height: 10px;
+    background-color: $dark-shade25;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 7px;
+  }
+}

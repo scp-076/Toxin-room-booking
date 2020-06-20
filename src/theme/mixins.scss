@@ -14,7 +14,7 @@
     height: 8px;
     position: absolute;
     right: 16px;
-    top: 45px;
+    top: 60px;
     color: $dark-shade50;
     pointer-events: none;
   }
@@ -35,7 +35,7 @@
   &__options {
     display: none;
     position: absolute;
-    top: 68px;
+    top: 84px;
     width: 100%;
     height: $height;
     flex-flow: column nowrap;
@@ -122,7 +122,7 @@
     height: 8px;
     position: absolute;
     right: 16px;
-    top: 44px;
+    top: 58px;
     color: $dark-shade50;
     pointer-events: none;
   }
