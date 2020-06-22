@@ -21,6 +21,8 @@ include form-elements/pagination/pagination
 include form-elements/checkbox-expandable/checkbox-expandable
 include form-elements/rich-checkbox/rich_checkbox
 include form-elements/bullet-list/bullet-list
+include hotel_benefits/hotel-benefits
+include comment/comment
 
 
 block main
@@ -95,3 +97,9 @@ block main
         div.bullet-list
             h3 bullet list
             +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия - после 13:00, а выезд до 12:00'])
+    section.benefits-and-comments
+        div.hotel-benefits
+            +benefit('Комфорт', 'Шумопоглощающие стены', '/src/images/smile_icon.svg')
+            +benefit('Удобство', 'Окно в каждой из спален', '/src/images/city_icon.svg')
+        div.comments
+            +comment('/src/images/avatar.svg', 'Мурад Сарафанов', '5 дней назад', 11, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')

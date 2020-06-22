@@ -1,0 +1,15 @@
+.benefit {
+  max-width: 291px;
+  display: flex;
+  margin-bottom: 17px;
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 10px;
+
+    &-benefit {
+      font-weight: bold;
+    }
+  }
+}

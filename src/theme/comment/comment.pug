@@ -1,0 +1,12 @@
+include ../form-elements/like_button/like_button
+
+mixin comment(img, name, date, likes, comment)
+    .comment
+        .comment-user
+            img.comment-user__avatar(src=img)
+            .comment-user-nameWrap
+                span.comment-user-nameWrap__name #{name}
+                span.comment-user-nameWrap__date #{date}
+        .comment-description
+            +like_button(likes)
+            p.comment-description__text #{comment}

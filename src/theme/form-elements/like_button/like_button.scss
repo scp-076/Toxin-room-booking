@@ -15,6 +15,7 @@
   left: 1px;
 
   &__wrap {
+    display: inline-flex;
     width: 40px;
     height: 20px;
     border-radius: 10px;
@@ -28,13 +29,13 @@
     background-repeat: no-repeat;
     width: 10px;
     height: 10px;
-    margin-left: 6px;
+    margin-left: 5px;
     margin-top: .5px;
   }
 
   &__counter {
     color: $dark-shade25;
-    margin-right: 10px;
+    margin-right: 9px;
     font-size: 12px;
     user-select: none;
   }

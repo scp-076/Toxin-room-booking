@@ -1,0 +1,38 @@
+.comment {
+  max-width: 711px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &-user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &__avatar {
+      width: 48px;
+      height: 48px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    &-nameWrap {
+      display: flex;
+      flex-flow: column nowrap;
+
+      &__name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-description {
+    display: flex;
+    flex-flow: row nowrap;
+
+    &__text {
+      display: block;
+      max-width: 90%;
+      margin-left: 18px;
+    }
+  }
+}

@@ -21,6 +21,8 @@
 @import "form-elements/checkbox-expandable/checkbox-expandable.scss";
 @import "form-elements/rich-checkbox/rich_checkbox.scss";
 @import "form-elements/bullet-list/bullet-list.scss";
+@import "hotel_benefits/hotel-benefits.scss";
+@import "comment/comment.scss";
 
 .colors-fonts {
   display: flex;
@@ -118,4 +120,12 @@
   & .bullet-list {
     width: 100%;
   }
+}
+
+.benefits-and-comments {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 150px;
 }

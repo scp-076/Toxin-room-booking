@@ -1,16 +1,18 @@
-const likeButtonWrap = document.querySelector('.like_button__wrap');
-const heart = document.querySelector('.like_button__heart');
-const counter = document.querySelector('.like_button__counter');
-let count = parseInt(counter.innerHTML);
+const likeButtonWrap = document.querySelectorAll('.like_button__wrap');
 
-likeButtonWrap.addEventListener('click', () => {
-    heart.classList.toggle('heart_purple');
-    likeButtonWrap.classList.toggle('border-purple');
-    counter.classList.toggle('counter-purple');
-    if(likeButtonWrap.classList.contains('border-purple')){
-        count++;
-    } else {
-        count--;
-    }
-    counter.innerHTML = count;
+likeButtonWrap.forEach(e => {
+    let heart = e.querySelector('.like_button__heart');
+    let counter = e.querySelector('.like_button__counter');
+    let count = parseInt(counter.innerHTML);
+    e.addEventListener('click', () => {
+        heart.classList.toggle('heart_purple');
+        e.classList.toggle('border-purple');
+        counter.classList.toggle('counter-purple');
+        if(e.classList.contains('border-purple')){
+            count++;
+        } else {
+            count--;
+        }
+        counter.innerHTML = count;
+    });
 });
