@@ -1,0 +1,41 @@
+@import "../../mixins";
+
+.room-finder-form {
+  @include form();
+
+  & h1 {
+    margin-bottom: 20px;
+  }
+
+  &__calendars {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__guests {
+    margin-bottom: 4px;
+  }
+
+  &__input-datesError {
+    font-size: 12px;
+    position: absolute;
+    top: 65px;
+    color: red;
+    visibility: hidden;
+  }
+
+  &__input-guestsError {
+    font-size: 12px;
+    position: absolute;
+    top: 65px;
+    color: red;
+    visibility: hidden;
+  }
+
+  &__dropdown_date {
+    @include dropdown_date(150px);
+  }
+}

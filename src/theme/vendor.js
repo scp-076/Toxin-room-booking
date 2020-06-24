@@ -25,8 +25,10 @@ export function dropDownSet(dropDownName, cls) {
     let btn_clear = wrap.querySelector(cls[12]);
     let btn_submit = wrap.querySelector(cls[13]);
 
+
     if(btn_submit){
-        btn_submit.addEventListener('click', () => {
+        btn_submit.addEventListener('click', (e) => {
+            e.preventDefault();
             dropdownMenu.classList.remove('options-shown');
         })
     }
@@ -73,37 +75,40 @@ export function dropDownSet(dropDownName, cls) {
     function countPlus(option, btn) {
         option.value++;
         btn.disabled = false;
-        if(dropDownName === 'dropdown_guests'){
-            btn_clear.style = 'visibility: visible;';
-        }
-
+        btn_clear.style = 'visibility: visible;';
     }
 
     input.addEventListener('click', () => {
         dropdownMenu.classList.toggle('options-shown');
     });
 
-    btn_option1_minus.addEventListener('click', () => {
+    btn_option1_minus.addEventListener('click', (e) => {
+        e.preventDefault();
         countMinus(count_option1, btn_option1_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
-    btn_option1_plus.addEventListener('click', () => {
+    btn_option1_plus.addEventListener('click', (e) => {
+        e.preventDefault();
         countPlus(count_option1, btn_option1_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
-    btn_option2_minus.addEventListener('click', () => {
+    btn_option2_minus.addEventListener('click', (e) => {
+        e.preventDefault();
         countMinus(count_option2, btn_option2_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
-    btn_option2_plus.addEventListener('click', () => {
+    btn_option2_plus.addEventListener('click', (e) => {
+        e.preventDefault();
         countPlus(count_option2, btn_option2_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
-    btn_option3_minus.addEventListener('click', () => {
+    btn_option3_minus.addEventListener('click', (e) => {
+        e.preventDefault();
         countMinus(count_option3, btn_option3_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
-    btn_option3_plus.addEventListener('click', () => {
+    btn_option3_plus.addEventListener('click', (e) => {
+        e.preventDefault();
         countPlus(count_option3, btn_option3_minus);
         setInputValue(count_option1, count_option2, count_option3);
     });
@@ -112,7 +117,8 @@ export function dropDownSet(dropDownName, cls) {
         if(input.value === ''){
             btn_clear.style = 'visibility: hidden;'
         }
-        btn_clear.addEventListener('click', () => {
+        btn_clear.addEventListener('click', (e) => {
+            e.preventDefault();
             count_option1.value = "0";
             count_option2.value = "0";
             count_option3.value = "0";
@@ -123,7 +129,7 @@ export function dropDownSet(dropDownName, cls) {
             btn_clear.style = 'visibility: hidden;';
         })
     }
-};
+}
 
 // air-datepicker
 ;(function (window, $, undefined) {
@@ -182,12 +188,6 @@ export function dropDownSet(dropDownName, cls) {
 
                 // navigation
                 monthsField: 'monthsShort',
-                // prevHtml: '<svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                //     '<path d="M16.1757 8.01562V9.98438H3.98819L9.56632 15.6094L8.16007 17.0156L0.144441 9L8.16007 0.984375L9.56632 2.39062L3.98819 8.01562H16.1757Z" fill="#BC9CFF"/>\n' +
-                //     '</svg>',
-                // nextHtml: '<svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
-                //     '<path d="M8.36252 0.984375L16.3781 9L8.36252 17.0156L6.95627 15.6094L12.5344 9.98438H0.346894V8.01562H12.5344L6.95627 2.39062L8.36252 0.984375Z" fill="#BC9CFF"/>\n' +
-                //     '</svg>',
                 prevHtml: '<img src="../src/images/arrow_back.svg" alt="previous"/>',
                 nextHtml: '<img src="../src/images/arrow_forward.svg" alt="next"/>',
                 navTitles: {

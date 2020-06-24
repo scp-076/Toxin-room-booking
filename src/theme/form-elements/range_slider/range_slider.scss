@@ -1,4 +1,32 @@
+@import "../../variables.scss";
+
 .slider {
   width: 266px;
   height: 6px;
+}
+
+.range-slider {
+  margin-bottom: 40px;
+
+  &__heading {
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 266px;
+    justify-content: space-between;
+  }
+
+  &__values {
+
+    &-min {
+      font-size: 12px;
+      color: $dark-shade50;
+    }
+
+    &-max {
+      font-size: 12px;
+      color: $dark-shade50;
+    }
+  }
+
 }

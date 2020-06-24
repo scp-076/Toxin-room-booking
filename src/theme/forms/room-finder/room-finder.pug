@@ -1,0 +1,23 @@
+include ../../form-elements/dropdown_date/dropdown_date
+include ../../form-elements/dropdown_guests/dropdown_guests
+include ../../form-elements/buttons/button_wide/button_wide
+
+mixin room-finder-form
+    .room-finder-form
+        form.room-finder-form__form(action="#", method="POST")
+            h1 Найдем номера под Ваши пожелания
+            .room-finder-form__calendars
+                .room-finder-form__dropdown_date
+                    h3 Прибытие
+                    label
+                        input.room-finder-form__dropdown_date__input(type="text", placeholder='ДД.ММ.ГГГГ')
+                .room-finder-form__dropdown_date
+                    h3 Выезд
+                    label
+                        input.room-finder-form__dropdown_date__input(type="text", placeholder='ДД.ММ.ГГГГ')
+                span.room-finder-form__input-datesError Дата выезда не может быть раньше даты вьезда
+            .room-finder-form__guests
+                .dropdown_guests
+                    +dropdown-guests-input('Гости')
+                    span.room-finder-form__input-guestsError Количество гостей не может быть меньше одного
+            +button_wide('Подобрать номер', false)

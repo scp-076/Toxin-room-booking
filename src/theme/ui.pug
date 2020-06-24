@@ -23,6 +23,7 @@ include form-elements/rich-checkbox/rich_checkbox
 include form-elements/bullet-list/bullet-list
 include hotel_benefits/hotel-benefits
 include comment/comment
+include forms/room-finder/room-finder
 
 
 block main
@@ -67,9 +68,6 @@ block main
                 +rate_button
         div.form-elements__buttons
             div.range-slider
-                div.range-slider__text
-                    h3 range slider
-                    span 5000&#8381; - 10000&#8381;
                 +range_slider
             div.buttons-simple
                 h3 buttons
@@ -103,3 +101,14 @@ block main
             +benefit('Удобство', 'Окно в каждой из спален', '/src/images/city_icon.svg')
         div.comments
             +comment('/src/images/avatar.svg', 'Мурад Сарафанов', '5 дней назад', 11, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+    section.forms
+        +room-finder-form
+
+
+
+
+
+
+
+    block scripts
+
