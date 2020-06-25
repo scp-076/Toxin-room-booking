@@ -5,7 +5,11 @@ include ../../form-elements/buttons/button_wide/button_wide
 mixin room-finder-form
     .room-finder-form
         form.room-finder-form__form(action="#", method="POST")
-            h1 Найдем номера под Ваши пожелания
+            .room-finder-form__heading
+                h1.room-finder-form__heading__h1 Найдем номера под Ваши пожелания
+                .room-finder-form__headingAlt
+                 h2.room-finder-form__headingAlt__roomNumber
+                 span.room-finder-form__headingAlt__price
             .room-finder-form__calendars
                 .room-finder-form__dropdown_date
                     h3 Прибытие
@@ -15,9 +19,20 @@ mixin room-finder-form
                     h3 Выезд
                     label
                         input.room-finder-form__dropdown_date__input(type="text", placeholder='ДД.ММ.ГГГГ')
-                span.room-finder-form__input-datesError Дата выезда не может быть раньше даты вьезда
+                span.room-finder-form__input-datesError Даты должны быть выбраны и дата выезда не может быть раньше даты вьезда
             .room-finder-form__guests
                 .dropdown_guests
                     +dropdown-guests-input('Гости')
                     span.room-finder-form__input-guestsError Количество гостей не может быть меньше одного
+            .room-finder-form__price
+                .room-finder-form__price-days
+                    span.room-finder-form__price-days__days-count
+                    span.room-finder-form__price-days__price
+                .room-finder-form__price-discount
+                    span.room-finder-form__price-discount__amount
+                    span.room-finder-form__price-discount__price
+                .room-finder-form__price-additional
+                    span.room-finder-form__price-additional__text
+                    span.room-finder-form__price-additional__price
+                h2.room-finder-form__price__total-price
             +button_wide('Подобрать номер', false)

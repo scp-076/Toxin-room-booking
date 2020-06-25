@@ -1,5 +1,6 @@
 import {dropDownSet} from "../../vendor.js";
 import "../../vendor.js";
+import {num2str} from "../../vendor";
 
 const clsGuests = ['.room-finder-form__guests',
     '.dropdown_guests__input-total',
@@ -25,7 +26,7 @@ let inputDeparture = form.querySelectorAll('.room-finder-form__dropdown_date__in
 let datesError = form.querySelector('.room-finder-form__input-datesError');
 let guestsError = form.querySelector('.room-finder-form__input-guestsError');
 let guestsInput = form.querySelector('.dropdown_guests__input-total');
-let arriveDate, departureDate;
+let arriveDate = null, departureDate = null;
 
 $(inputArrive).datepicker({
     minDate: new Date(),
@@ -47,18 +48,68 @@ $(inputDeparture).datepicker({
     }
 });
 
-function datesValidate(e, arriveDate, departureDate, guestsInput) {
-    if(arriveDate > departureDate){
-        e.preventDefault();
-        datesError.style = "visibility: visible;";
+let formHeadingH1 = form.querySelector('.room-finder-form__heading__h1');
+let formHeadingAlt = form.querySelector('.room-finder-form__headingAlt');
+let headingRoomNumber = form.querySelector('.room-finder-form__headingAlt__roomNumber');
+let headingRoomPrice = form.querySelector('.room-finder-form__headingAlt__price');
+let priceBlock = form.querySelector('.room-finder-form__price');
+let spanDays = form.querySelector('.room-finder-form__price-days__days-count');
+let spanDaysPrice = form.querySelector('.room-finder-form__price-days__price');
+let spanDiscount = form.querySelector('.room-finder-form__price-discount__amount');
+let spanDiscountPrice = form.querySelector('.room-finder-form__price-discount__price');
+let spanAdditional = form.querySelector('.room-finder-form__price-additional__text');
+let spanAdditionalPrice = form.querySelector('.room-finder-form__price-additional__price');
+let totalPriceText = form.querySelector('.room-finder-form__price__total-price');
+let submitBtn = form.querySelector('.button-wide');
+
+function findRoom(e, arriveDate, departureDate, guestsInput) {
+    e.preventDefault();
+    function checkDates(arriveDate, departureDate, guestsInput) {
+        if(arriveDate > departureDate || arriveDate === null || departureDate === null){
+            datesError.style = "visibility: visible;";
+            return false;
+        }
+        if(arriveDate <= departureDate){
+            datesError.style = "visibility: hidden;";
+        }
+        if(guestsInput.value === ""){
+            guestsError.style = "visibility: visible;";
+            return false;
+        }
+        if(guestsInput.value !== ""){
+            guestsError.style = "visibility: hidden;";
+            return true;
+        }
+        return true;
     }
-    if(arriveDate <= departureDate){
-        datesError.style = "visibility: hidden;";
+    let dailyPrice = 9990;
+    let discount = 2179;
+    let additionalServicePrice = 300;
+    let daysAmount = parseInt(departureDate) - parseInt(arriveDate);
+    let daysAmountToString = num2str(daysAmount, ['сутки', 'суток', 'суток']);
+
+    let totalPrice = daysAmount * dailyPrice - discount + additionalServicePrice;
+
+    checkDates(arriveDate, departureDate, guestsInput);
+    if(checkDates(arriveDate, departureDate, guestsInput)) {
+        formHeadingH1.style = "display: none;";
+        formHeadingAlt.style = "display: flex;";
+        priceBlock.style = "display: block;";
+        spanDays.innerHTML = `${dailyPrice}&#8381; x ${daysAmount + " " + daysAmountToString}`;
+        spanDaysPrice.innerHTML = dailyPrice * daysAmount + "&#8381;";
+        spanDiscount.innerHTML = `Сбор за услуги: скидка ${discount}&#8381;`;
+        spanDiscountPrice.innerHTML = "0&#8381;";
+        spanAdditional.innerHTML = "Сбор за дополнительные услуги";
+        spanAdditionalPrice.innerHTML = `${additionalServicePrice}&#8381;`;
+        totalPriceText.innerHTML =  totalPrice > 10000
+            ? "Итого" + "......................................" + totalPrice + "&#8381;"
+            : "Итого" + "........................................" + totalPrice + "&#8381;";
+        headingRoomNumber.innerHTML = `№ 888 <i>люкс</i>`;
+        headingRoomPrice.innerHTML = `${dailyPrice}&#8381; в сутки`;
+        submitBtn.textContent = "забронировать";
     }
-    if(guestsInput.value === ""){
-        e.preventDefault();
-        guestsError.style = "visibility: visible;";
-    }
+
+
 }
 
-form.onsubmit = (e) => datesValidate(e, arriveDate, departureDate, guestsInput);
+form.onsubmit = (e) => findRoom(e, arriveDate, departureDate, guestsInput);

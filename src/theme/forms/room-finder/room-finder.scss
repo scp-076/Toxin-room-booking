@@ -3,12 +3,27 @@
 .room-finder-form {
   @include form();
 
-  & h1 {
+  &__heading {
     margin-bottom: 20px;
+  }
+
+  &__headingAlt {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__roomNumber {
+      font-size: 14px;
+
+      & i {
+        color: $purple;
+      }
+    }
   }
 
   &__calendars {
     width: 100%;
+    max-width: 320px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -22,8 +37,9 @@
   &__input-datesError {
     font-size: 12px;
     position: absolute;
-    top: 65px;
+    top: 68px;
     color: red;
+    line-height: 100%;
     visibility: hidden;
   }
 
@@ -37,5 +53,41 @@
 
   &__dropdown_date {
     @include dropdown_date(150px);
+  }
+
+  &__price {
+    display: none;
+
+    &-days {
+      display: flex;
+      justify-content: space-between;
+
+      &__days-count {
+        max-width: 214px;
+      }
+    }
+
+    &-discount {
+      display: flex;
+      justify-content: space-between;
+
+      &__amount {
+        max-width: 214px;
+      }
+    }
+
+    &-additional {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+
+      &__text {
+        max-width: 214px;
+      }
+    }
+
+    &__total-price {
+      margin-bottom: 20px;
+    }
   }
 }
