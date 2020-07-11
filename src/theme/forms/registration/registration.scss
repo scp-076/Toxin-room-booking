@@ -1,0 +1,27 @@
+@import "../../mixins.scss";
+
+.registration-form {
+  @include form();
+
+  &__heading {
+    margin-bottom: 20px;
+  }
+
+  &__radio-btns {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__auth {
+    margin-bottom: 20px;
+  }
+
+  &__login {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+}

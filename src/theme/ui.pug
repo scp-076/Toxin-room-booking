@@ -24,6 +24,8 @@ include form-elements/bullet-list/bullet-list
 include hotel_benefits/hotel-benefits
 include comment/comment
 include forms/room-finder/room-finder
+include forms/registration/registration
+include forms/login/login
 
 
 block main
@@ -103,6 +105,8 @@ block main
             +comment('/src/images/avatar.svg', 'Мурад Сарафанов', '5 дней назад', 11, 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
     section.forms
         +room-finder-form
+        +registration-form
+        +login-form
 
 
 

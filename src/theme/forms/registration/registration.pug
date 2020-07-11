@@ -1,0 +1,27 @@
+include ../../form-elements/text_field/text-field
+include ../../form-elements/radio_button/radio_button
+include ../../form-elements/masked_date_input/masked_date_input
+include ../../form-elements/checkbox_slider/checkbox_slider
+include ../../form-elements/buttons/button_wide/button_wide
+include ../../form-elements/buttons/button_border/button_border
+
+mixin registration-form
+    .registration-form
+        form.registration-form__form(action="#", method="POST")
+            h1.registration-form__heading Регистрация аккаунта
+            +text-input('text', 'Имя')
+            +text-input('text', 'Фамилия')
+            .registration-form__radio-btns
+                +radio_button('Мужчина', 'gender')
+                +radio_button('Женщина', 'gender')
+            .registration-form__birth-date
+                +masked_date_input('дата рождения')
+            .registration-form__auth
+                h3.registration-form__auth__heading данные входа в сервис
+                +text-input('text', 'Email')
+                +text-input('text', 'Пароль')
+                +checkbox_slider('Получать спецпредложения')
+            +button_wide('Перейти к оплате', false)
+        .registration-form__login
+            span Уже есть аккаунт на Toxin?
+            +button_border('Войти', false)

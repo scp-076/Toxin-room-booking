@@ -75,7 +75,9 @@ export function dropDownSet(dropDownName, cls) {
     function countPlus(option, btn) {
         option.value++;
         btn.disabled = false;
-        btn_clear.style = 'visibility: visible;';
+        if(btn.clear) {
+            btn_clear.style = 'visibility: visible;';
+        }
     }
 
     input.addEventListener('click', () => {

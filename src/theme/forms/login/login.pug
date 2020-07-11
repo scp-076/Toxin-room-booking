@@ -1,0 +1,13 @@
+include ../../form-elements/text_field/text-field
+include ../../form-elements/buttons/button_wide/button_wide
+
+mixin login-form
+    .login-form
+        form.login-form__form
+            h1.login-form__heading Войти
+            +text-input('email', 'Email')
+            +text-input('password', 'Пароль')
+            +button_wide('Войти', false)
+        .login-form__register
+            span Нет аккаунта на Toxin?
+            +button_border('Создать', false)
