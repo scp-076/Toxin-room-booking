@@ -26,6 +26,12 @@ include comment/comment
 include forms/room-finder/room-finder
 include forms/registration/registration
 include forms/login/login
+include ./header/header-auth
+include ./header/header-logged
+
+block header
+    +header-auth
+    +header-logged
 
 
 block main

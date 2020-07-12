@@ -1,0 +1,20 @@
+include ../form-elements/buttons/button_border/button_border
+include ../form-elements/buttons/button_filled/button_filled
+
+mixin header-auth
+    .header
+        .header__col-left
+            img(src="../images/logo.svg")
+        .header__col-right
+            .header__col-right__nav
+                ul
+                    li.header__col-right__nav__item
+                        a(href="#") Home
+                        a(href="#") About us
+                        a(href="#") Services
+                        a(href="#") Careers
+                        a(href="#") News
+                        a(href="#") Documentation
+            .header__col-right__btns
+                +button_border('LOGIN', false)
+                +button_filled('REGISTER', false)
