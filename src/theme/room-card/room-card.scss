@@ -1,0 +1,121 @@
+@import "../variables.scss";
+
+
+.room-card {
+  width: 270px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+  margin-bottom: 30px;
+
+  & hr {
+    width: 230px;
+    margin: 0;
+    color: $dark-shade25;
+  }
+
+  &__slider {
+    height: 151px;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 12px 20px;
+
+    & h2 i {
+      color: $purple;
+    }
+
+    & span {
+      font-size: 12px;
+      color: $dark-shade50;
+      font-weight: bold;
+
+      & b {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__rating {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 8px 20px 20px 20px;
+
+    & span {
+      font-size: 12px;
+      color: $dark-shade50;
+      font-weight: bold;
+
+      & b {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.swiper-container {
+  width: 270px;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background: #eee;
+}
+
+.swiper-slide1 {
+  background: url("../images/room-img1.png");
+}
+
+.swiper-slide2 {
+  background: url("../images/room-img2.png");
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.swiper-button-prev {
+  width: 20px !important;
+  height: 20px !important;
+  background: url("../images/v_arrow_white_left.svg") right no-repeat;
+  background-size: contain;
+  left: 0 !important;
+  top: 60% !important;
+}
+
+.swiper-button-next {
+  width: 20px !important;
+  height: 20px !important;
+  background: url("../images/v_arrow_white_left.svg") right no-repeat;
+  background-size: contain;
+  transform: rotate(180deg);
+  right: 0 !important;
+  top: 60% !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1 !important;
+  background: transparent !important;
+  border: 1px solid #fff;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff !important;
+}

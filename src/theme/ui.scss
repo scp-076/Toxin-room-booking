@@ -27,6 +27,7 @@
 @import "forms/registration/registration.scss";
 @import "forms/login/login.scss";
 @import "header/header.scss";
+@import "room-card/room-card.scss";
 
 .colors-fonts {
   display: flex;
@@ -135,4 +136,9 @@
   justify-content: space-between;
   width: 100%;
   padding: 149px 140px;
+}
+
+.room-cards {
+  display: flex;
+  flex-flow: column nowrap;
 }

@@ -28,6 +28,7 @@ include forms/registration/registration
 include forms/login/login
 include ./header/header-auth
 include ./header/header-logged
+include ./room-card/room-card
 
 block header
     +header-auth
@@ -113,6 +114,9 @@ block main
         +room-finder-form
         +registration-form
         +login-form
+        .room-cards
+            +room-card('9990', '145')
+            +room-card('9900', '65')
 
 
 

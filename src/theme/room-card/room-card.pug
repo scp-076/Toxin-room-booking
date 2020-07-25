@@ -1,0 +1,23 @@
+include ../form-elements/rate_button/rate_button
+
+mixin room-card(price, ratings)
+    .room-card
+        .room-card__slider
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide.swiper-slide1
+                    .swiper-slide.swiper-slide2
+                    .swiper-slide.swiper-slide1
+                    .swiper-slide.swiper-slide2
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+        .room-card__info
+            h2.room-card__info__roomNumber № 888 <i>люкс</i>
+            span.room-card__info__price #{price}&#8381; <b>в сутки</b>
+        hr
+        .room-card__rating
+            +rate_button
+            span #{ratings} <b>Отзывов</b>
+
+
